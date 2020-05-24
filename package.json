@@ -1,0 +1,55 @@
+{
+  "name": "VueLibExample",
+  "version": "0.0.0",
+  "description": "",
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.esm.js",
+  "style": "./dist/styles.css",
+  "types": "./dist/types/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "test": "jest",
+    "clean_dist": "rimraf dist/*",
+    "prebuild": "npm run clean_dist",
+    "build": "NODE_ENV=production rollup --config rollup.config.js",
+    "watch": "rollup --config rollup.config.js --watch",
+    "lint": "npm run build && eslint . --ext .ts,.js,.vue --fix"
+  },
+  "author": "przemkow",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@rollup/plugin-babel": "^5.0.2",
+    "@types/jest": "^25.2.1",
+    "@typescript-eslint/eslint-plugin": "^2.24.0",
+    "@typescript-eslint/parser": "^2.24.0",
+    "@vue/test-utils": "^1.0.3",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^25.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "jest": "^25.2.1",
+    "node-sass": "^4.13.1",
+    "prettier": "^1.19.1",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.10.9",
+    "rollup-plugin-css-only": "^2.0.0",
+    "rollup-plugin-typescript2": "^0.26.0",
+    "rollup-plugin-vue": "^5.1.9",
+    "standard-version": "^7.1.0",
+    "ts-jest": "^25.2.1",
+    "tslib": "^1.11.1",
+    "typescript": "^3.8.3",
+    "vue": "^2.6.11",
+    "vue-jest": "^3.0.5",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "peerDependencies": {
+    "vue": "^2.6.11"
+  }
+}

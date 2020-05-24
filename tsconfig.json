@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "target": "esnext",
+    "allowJs": true,
+    "noImplicitAny": true,
+    "preserveConstEnums": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "lib": ["esnext", "dom"],
+    "strict": true,
+    "sourceRoot": "./src",
+    "rootDir": "./",
+    "outDir": "dist",
+    "declaration": true,
+    "declarationDir": "dist/types",
+    "types": ["@types/jest"]
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.vue"
+  ],
+  "exclude": [
+    "dist",
+    "node_modules",
+    "developPreview"
+  ]
+}
