@@ -26,6 +26,7 @@
     "@types/jest": "^25.2.1",
     "@typescript-eslint/eslint-plugin": "^2.24.0",
     "@typescript-eslint/parser": "^2.24.0",
+    "@vue/compiler-sfc": "^3.0.0-beta.14",
     "@vue/test-utils": "^1.0.3",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^25.1.0",
@@ -38,18 +39,20 @@
     "prettier": "^1.19.1",
     "rimraf": "^3.0.2",
     "rollup": "^2.10.9",
-    "rollup-plugin-css-only": "^2.0.0",
+    "rollup-plugin-postcss": "^3.1.1",
     "rollup-plugin-typescript2": "^0.26.0",
-    "rollup-plugin-vue": "^5.1.9",
+    "rollup-plugin-vue": "./rollup-plugin-vue-6.tgz",
     "standard-version": "^7.1.0",
     "ts-jest": "^25.2.1",
     "tslib": "^1.11.1",
     "typescript": "^3.8.3",
-    "vue": "^2.6.11",
-    "vue-jest": "^3.0.5",
-    "vue-template-compiler": "^2.6.11"
+    "vue": "^3.0.0-beta.14",
+    "vue-jest": "^3.0.5"
   },
   "peerDependencies": {
-    "vue": "^2.6.11"
+    "vue": "^3.0.0-beta.14"
+  },
+  "dependencies": {
+    "sass": "^1.26.5"
   }
 }

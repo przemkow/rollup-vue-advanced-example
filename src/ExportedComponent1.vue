@@ -8,10 +8,10 @@
   </div>
 </template>
 <script lang="ts">
-import Vue, { PropOptions } from "vue";
+import { defineComponent } from "vue";
 import Add from "./components/Add.vue";
 
-export default Vue.extend({
+export default defineComponent({
   name: "ExportedComponent1",
   components: {
     Add
@@ -20,11 +20,11 @@ export default Vue.extend({
     firstName: {
       type: String,
       required: true
-    } as PropOptions<string>,
+    },
     lastName: {
       type: String,
       required: true
-    } as PropOptions<string>
+    }
   },
   computed: {
     fullName(): string {

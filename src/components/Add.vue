@@ -1,22 +1,22 @@
 <template>
   <div :class="$style.sum">
-    {{ sum(this.numberA, this.numberB) }}
+    {{ sum(numberA, numberB) }}
   </div>
 </template>
 <script lang="ts">
-import Vue, { PropOptions } from "vue";
+import { defineComponent } from "vue";
 
-export default Vue.extend({
+export default defineComponent({
   name: "Add",
   props: {
     numberA: {
       type: Number,
       required: true
-    } as PropOptions<number>,
+    },
     numberB: {
       type: Number,
       required: true
-    } as PropOptions<number>
+    }
   },
   methods: {
     sum(a: number, b: number) {

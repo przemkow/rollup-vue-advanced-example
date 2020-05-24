@@ -1,7 +1,7 @@
 import typescript from "rollup-plugin-typescript2";
 import VuePlugin from "rollup-plugin-vue";
 import pkg from "./package.json";
-import css from "rollup-plugin-css-only";
+import postcss from "rollup-plugin-postcss";
 import { getBabelOutputPlugin } from "@rollup/plugin-babel";
 
 export default [
@@ -13,16 +13,18 @@ export default [
       format: `esm`
     },
     plugins: [
-      typescript({
-        tsconfig: "tsconfig.build.json",
-        useTsconfigDeclarationDir: true
-      }),
       // Compile Vue for browser, ignore CSS (handled in cjs build)
       VuePlugin({
-        css: false
+        target: "browser",
+        preprocessStyles: true
       }),
-      css({
-        output: false
+      typescript({
+        tsconfig: "tsconfig.build.json",
+        useTsconfigDeclarationDir: true,
+        include: [/\.vue\?.*?lang=ts/, /\.tsx?$/]
+      }),
+      postcss({
+        extract: false
       }),
       // transpile esnext to es5 (IE support)
       getBabelOutputPlugin({
@@ -38,19 +40,17 @@ export default [
       format: `cjs`
     },
     plugins: [
+      VuePlugin({
+        target: "node",
+        preprocessStyles: true
+      }),
       typescript({
         tsconfig: "tsconfig.build.json",
-        useTsconfigDeclarationDir: true
+        useTsconfigDeclarationDir: true,
+        include: [/\.vue\?.*?lang=ts/, /\.tsx?$/]
       }),
-      // Compile Vue for node(SSR), generate CSS file
-      VuePlugin({
-        css: false,
-        template: {
-          optimizeSSR: true
-        }
-      }),
-      css({
-        output: pkg.style
+      postcss({
+        extract: "styles.css"
       }),
       // transpile esnext to node 12 compatible build.
       getBabelOutputPlugin({

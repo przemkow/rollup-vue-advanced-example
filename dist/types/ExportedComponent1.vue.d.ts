@@ -1,8 +1,2 @@
-import Vue from "vue";
-declare const _default: import("vue/types/vue").ExtendedVue<Vue, unknown, unknown, {
-    fullName: string;
-}, {
-    firstName: string;
-    lastName: string;
-}>;
+declare const _default: never;
 export default _default;

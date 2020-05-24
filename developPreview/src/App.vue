@@ -14,11 +14,13 @@
   </div>
 </template>
 
-<script lang="ts">
-import Vue from "vue";
-import { multiply, ExportedComponent1, ExportedComponent2 } from "../../";
-
-export default Vue.extend({
+<script>
+import {
+  multiply,
+  ExportedComponent1,
+  ExportedComponent2
+} from "external-vue-lib";
+export default {
   name: "App",
   components: {
     ExportedComponent1,
@@ -27,7 +29,7 @@ export default Vue.extend({
   mounted() {
     console.log(multiply(2, 5));
   }
-});
+};
 </script>
 
 <style>
