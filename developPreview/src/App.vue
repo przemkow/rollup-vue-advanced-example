@@ -31,6 +31,8 @@ export default Vue.extend({
 </script>
 
 <style>
+@import "../../dist/styles.css";
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
