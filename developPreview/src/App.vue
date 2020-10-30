@@ -5,6 +5,7 @@
       <ExportedComponent1
         first-name="hello"
         last-name="vue"
+        foo="bar"
       ></ExportedComponent1>
     </div>
     <div class="component">
@@ -16,7 +17,11 @@
 
 <script lang="ts">
 import Vue from "vue";
-import { multiply, ExportedComponent1, ExportedComponent2 } from "../../";
+import {
+  multiply,
+  ExportedComponent1,
+  ExportedComponent2
+} from "VueLibExample";
 
 export default Vue.extend({
   name: "App",
@@ -30,8 +35,10 @@ export default Vue.extend({
 });
 </script>
 
-<style>
-@import "../../dist/styles.css";
+<style lang="scss">
+@import "~VueLibExample";
+// without SCSS
+// @import "~VueLibExample/dist/styles.css"
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
