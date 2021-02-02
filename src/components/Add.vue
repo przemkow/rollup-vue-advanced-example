@@ -31,3 +31,7 @@ export default Vue.extend({
   color: red;
 }
 </style>
+
+<style lang="scss">
+@import "../assets/shared";
+</style>

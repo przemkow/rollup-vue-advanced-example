@@ -189,7 +189,7 @@ var __vue_staticRenderFns__ = [];
 
 const __vue_inject_styles__ = function (inject) {
   if (!inject) return;
-  inject("data-v-c159dfea_0", {
+  inject("data-v-5a97ce43_0", {
     source: "",
     map: undefined,
     media: undefined
@@ -206,7 +206,7 @@ const __vue_inject_styles__ = function (inject) {
 const __vue_scope_id__ = undefined;
 /* module identifier */
 
-const __vue_module_identifier__ = "data-v-c159dfea";
+const __vue_module_identifier__ = "data-v-5a97ce43";
 /* functional template */
 
 const __vue_is_functional_template__ = false;
@@ -253,7 +253,7 @@ var __vue_render__$1 = function () {
 
   return _c('div', {
     staticClass: "header"
-  }, [_vm._ssrNode(_vm._ssrEscape("\n  " + _vm._s(_vm.fullName) + "\n  ")), _vm._ssrNode("<div data-v-6d8fb8c8>", "</div>", [_vm._ssrNode("\n    Sum of 1 and 2:\n    "), _c('Add', {
+  }, [_vm._ssrNode(_vm._ssrEscape("\n  " + _vm._s(_vm.fullName) + "\n  ")), _vm._ssrNode("<div data-v-ec1be178>", "</div>", [_vm._ssrNode("\n    Sum of 1 and 2:\n    "), _c('Add', {
     attrs: {
       "number-a": 1,
       "number-b": 2
@@ -267,10 +267,10 @@ var __vue_staticRenderFns__$1 = [];
 const __vue_inject_styles__$1 = undefined;
 /* scoped */
 
-const __vue_scope_id__$1 = "data-v-6d8fb8c8";
+const __vue_scope_id__$1 = "data-v-ec1be178";
 /* module identifier */
 
-const __vue_module_identifier__$1 = "data-v-6d8fb8c8";
+const __vue_module_identifier__$1 = "data-v-ec1be178";
 /* functional template */
 
 const __vue_is_functional_template__$1 = false;
@@ -320,10 +320,10 @@ var __vue_staticRenderFns__$2 = [];
 const __vue_inject_styles__$2 = undefined;
 /* scoped */
 
-const __vue_scope_id__$2 = "data-v-382a66c4";
+const __vue_scope_id__$2 = "data-v-63a401ad";
 /* module identifier */
 
-const __vue_module_identifier__$2 = "data-v-382a66c4";
+const __vue_module_identifier__$2 = "data-v-63a401ad";
 /* functional template */
 
 const __vue_is_functional_template__$2 = false;

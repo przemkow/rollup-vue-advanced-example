@@ -3,6 +3,8 @@ import VuePlugin from "rollup-plugin-vue";
 import pkg from "./package.json";
 import css from "rollup-plugin-css-only";
 import { getBabelOutputPlugin } from "@rollup/plugin-babel";
+import * as fs from "fs";
+let postcss = require("postcss");
 
 export default [
   // ESM build to be used with webpack/rollup.
@@ -10,7 +12,8 @@ export default [
     input: "src/index.ts",
     output: {
       file: pkg.module,
-      format: `esm`
+      format: `esm`,
+      external: ["vue"]
     },
     plugins: [
       typescript({
@@ -50,7 +53,15 @@ export default [
         }
       }),
       css({
-        output: pkg.style
+        async output(styles) {
+          // parse generated Styles using postcss to remove possible styles duplication
+          const parsedStyles = await postcss([
+            require("cssnano")({
+              preset: "default"
+            })
+          ]).process(styles);
+          fs.writeFileSync(pkg.style, parsedStyles);
+        }
       }),
       // transpile esnext to node 12 compatible build.
       getBabelOutputPlugin({
